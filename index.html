@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZN Gamer - Official Website</title>
-    <!-- ইউটিউব অফিশিয়াল উইজেট স্ক্রিপ্ট -->
-    <script src="https://apis.google.com/js/platform.js"></script>
     <style>
         /* মূল ডিজাইন ও কালার থিম (গেমিং ভাইব) */
         body {
@@ -39,15 +37,23 @@
             margin-top: 10px;
         }
 
-        /* অফিশিয়াল সাবস্ক্রাইব বক্স */
-        .yt-sub-box {
-            margin: 20px auto;
-            max-width: 300px;
-            background: #151b22;
-            border: 2px solid #45f3ff;
+        /* সুন্দর স্টাইলিশ সাবস্ক্রাইবার শো বক্স */
+        .sub-counter-box {
+            margin: 20px auto 0 auto;
+            max-width: 320px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px dashed #ff0000;
             border-radius: 10px;
             padding: 15px;
-            box-shadow: 0 0 15px rgba(69, 243, 255, 0.2);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+        }
+
+        .sub-count-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px #ff0000;
+            margin: 5px 0;
         }
 
         /* কন্টেইনার */
@@ -74,9 +80,8 @@
         }
 
         .card h2 {
-            margin: 0 0 20px 0;
-            color: #45f3ff;
-            text-transform: uppercase;
+            color: #fff;
+            margin-top: 0;
         }
 
         /* সুন্দর বোতাম বা বাটন */
@@ -101,6 +106,31 @@
             background: linear-gradient(90deg, #1f2833, #45f3ff);
             color: #fff;
             box-shadow: 0 0 25px rgba(69, 243, 255, 0.8);
+        }
+
+        /* ফ্রি ফায়ার প্লে-স্টোর বাটন ও লোগো */
+        .btn-playstore {
+            background: linear-gradient(90deg, #34a853, #188038);
+            box-shadow: 0 0 15px rgba(52, 168, 83, 0.4);
+            color: #fff;
+        }
+        .btn-playstore:hover {
+            background: linear-gradient(90deg, #188038, #34a853);
+            box-shadow: 0 0 25px rgba(52, 168, 83, 0.8);
+            color: #fff;
+        }
+        .game-logo {
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
+            margin: 15px 0 5px 0;
+        }
+        .game-logo:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 25px #ff6600;
         }
 
         /* ইউটিউব ভিডিও গ্রিড */
@@ -186,18 +216,18 @@
         <h1>ZN Gamer</h1>
         <p>স্বাগতম খানদানি ছেলেরা! ফ্রি ফায়ার প্রক্সি সার্ভার এবং সব সেফ ডাউনলোড লিংক এখানে পাবেন।</p>
         
-        <!-- ১. অফিশিয়াল রিয়েল সাবস্ক্রাইবার প্লাগইন (Google Approved) -->
-        <div class="yt-sub-box">
-            <p style="margin: 0 0 10px 0; font-size: 0.9rem; color: #66fcf1; font-weight: bold;">🔴 LIVE SUBSCRIBERS COUNT</p>
-            <!-- আপনার অরিজিনাল চ্যানেল আইডির অফিশিয়াল কাউন্টার উইজেট -->
-            <div class="g-ytsubscribe" data-channelid="UC_mDUMp19e0A7_gO12Vms8A" data-layout="full" data-theme="dark" data-count="default"></div>
+        <!-- আপনার সাবস্ক্রাইবার শো বক্স (১০০% শো করবে) -->
+        <div class="sub-counter-box">
+            <p style="margin: 0; font-size: 0.95rem; color: #ff4a5a; font-weight: bold;">🔴 ZN GAMER SUBSCRIBERS</p>
+            <div class="sub-count-number">62.5K+</div>
+            <p style="margin: 0; font-size: 0.8rem; color: #a0aec0;">Khanidani Family Members</p>
         </div>
     </header>
 
     <!-- মেইন কন্টেন্ট -->
     <div class="container">
 
-        <!-- ২. ফাইল ডাউনলোড কার্ড (Astute Server লিংক সহ) -->
+        <!-- ফাইল ডাউনলোড কার্ড -->
         <div class="card">
             <h2>Free Fire VVIP Proxy Server (OB53)</h2>
             <p>ভিডিওতে দেখানো প্রক্সি সার্ভারের জেনুইন এবং সুরক্ষিত ফাইলটি কোনো ঝামেলা ছাড়াই সরাসরি ডাউনলোড করতে নিচের বাটনে ক্লিক করুন।</p>
@@ -205,16 +235,28 @@
                 <strong>সাবধানতা:</strong> দয়া করে কেউ আপনার মেইন জিমেইল বা ফেসবুক আইডি এখানে লগইন করবেন না। শুধুমাত্র একটি নতুন <strong>Guest Account</strong> খুলে খেলুন।
             </blockquote>
             
-            <!-- জাভাস্ক্রিপ্ট সেফ ডাউনলোড বাটন -->
+            <!-- প্রক্সি সার্ভার ডাউনলোড বাটন -->
             <button onclick="window.open('https://astuteserver.com/', '_blank', 'noopener,noreferrer')" class="btn">সরাসরি ডাউনলোড করুন</button>
+            
+            <hr style="border: 0; height: 1px; background: #2c3540; margin: 30px 0;">
+            
+            <!-- ফ্রি ফায়ার প্লে-স্টোর ডাউনলোড সেকশন -->
+            <h3 style="color: #45f3ff; margin-bottom: 5px;">Free Fire Official Game Download</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 10px;">নিচের লোগো অথবা বাটনে ক্লিক করে সরাসরি প্লে-স্টোর থেকে মেইন গেম ডাউনলোড করুন:</p>
+            
+            <img src="https://garenafreenew-a.akamaihd.net/ff/garena_ff_web/live/id/pc/images/favicon.ico" alt="Free Fire Logo" class="game-logo" onclick="window.open('https://play.google.com/store/apps/details?id=com.dts.freefireth', '_blank')">
+            <br>
+            <button onclick="window.open('https://play.google.com/store/apps/details?id=com.dts.freefireth', '_blank')" class="btn btn-playstore">
+                🎮 Download From Play Store
+            </button>
         </div>
 
-        <!-- ৩. ভিডিও গ্যালারি সেকশন (গিটহাব সেফ ও ফুল ওয়ার্কিং) -->
+        <!-- ভিডিও গ্যালারি সেকশন -->
         <div class="card">
             <h2>আমার সব ভিডিওসমূহ</h2>
             <div class="video-grid">
                 
-                <!-- ভিডিও ১ (আপনার প্রক্সি সার্ভার ভিডিও) -->
+                <!-- ভিডিও ১ -->
                 <div class="video-card">
                     <div class="video-responsive">
                         <iframe src="https://www.youtube.com/embed/g_b5BlffeHI" allowfullscreen></iframe>
@@ -222,7 +264,7 @@
                     <div class="video-title">New Proxy server Download | Secure 100% | No Terabox</div>
                 </div>
 
-                <!-- ভিডিও ২ (আপনার আরেকটি মোস্ট পপুলার ভিডিও) -->
+                <!-- ভিডিও ২ -->
                 <div class="video-card">
                     <div class="video-responsive">
                         <iframe src="https://www.youtube.com/embed/gE2lZ5Y5BwQ" allowfullscreen></iframe>
@@ -233,10 +275,10 @@
             </div>
         </div>
 
-        <!-- ৪. বিশাল অ্যানিমেটেড সাবস্ক্রাইব বাটন অপশন -->
+        <!-- বিশাল অ্যানিমেটেড সাবস্ক্রাইব বাটন -->
         <a href="https://www.youtube.com/@ZNGameryoutuber?sub_confirmation=1" target="_blank" class="btn-big-youtube">🔴 চ্যানেলটি সাবস্ক্রাইব করুন 🔴</a>
 
-        <!-- ৫. সামাজিক যোগাযোগ মাধ্যম -->
+        <!-- সামাজিক যোগাযোগ মাধ্যম -->
         <div class="card">
             <h2>যোগাযোগ ও সাপোর্ট</h2>
             <p>আপনার কোনো সমস্যা হলে বা আনলক করতে সমস্যা হলে সরাসরি আমার সোশ্যাল মিডিয়ায় যোগাযোগ করতে পারেন।</p>
