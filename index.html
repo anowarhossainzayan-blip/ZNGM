@@ -37,6 +37,18 @@
             margin-top: 10px;
         }
 
+        /* লাইভ সাবস্ক্রাইবার কাউন্টার সেকশন */
+        .sub-counter-box {
+            margin: 20px auto;
+            max-width: 400px;
+            background: #151b22;
+            border: 2px dashed #ff0000;
+            border-radius: 10px;
+            padding: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+
         /* কন্টেইনার */
         .container {
             max-width: 1000px;
@@ -61,8 +73,9 @@
         }
 
         .card h2 {
-            color: #fff;
-            margin-top: 0;
+            margin: 0 0 20px 0;
+            color: #45f3ff;
+            text-transform: uppercase;
         }
 
         /* সুন্দর বোতাম বা বাটন */
@@ -78,6 +91,9 @@
             box-shadow: 0 0 15px rgba(69, 243, 255, 0.4);
             transition: 0.3s;
             margin-top: 15px;
+            margin-right: 10px;
+            cursor: pointer;
+            border: none;
         }
 
         .btn:hover {
@@ -86,15 +102,48 @@
             box-shadow: 0 0 25px rgba(69, 243, 255, 0.8);
         }
 
-        .btn-youtube {
-            background: #ff0000;
+        /* বিশাল অ্যানিমেটেড সাবস্ক্রাইব বাটন */
+        .btn-big-youtube {
+            display: block;
+            width: 80%;
+            max-width: 500px;
+            margin: 30px auto;
+            background: linear-gradient(90deg, #ff0000, #b30000);
             color: #fff;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+            transition: 0.3s;
+            text-transform: uppercase;
+            animation: pulse 1.5s infinite;
         }
 
-        .btn-youtube:hover {
-            background: #cc0000;
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); }
+            50% { transform: scale(1.03); box-shadow: 0 0 35px rgba(255, 0, 0, 0.9); }
+            100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); }
+        }
+
+        /* প্লেলিস্ট কন্টেইনার */
+        .playlist-responsive {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 2px solid #2c3540;
+        }
+
+        .playlist-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         /* ফুটার */
@@ -113,32 +162,48 @@
     <!-- হেডার বা ব্যানার -->
     <header>
         <h1>ZN Gamer</h1>
-        <p>স্বাগতম খানদানি ছেলেরা! ফ্রি ফায়ার প্রক্সি সার্ভার এবং সব সেফ ডাউনলোড লিংক এখানে পাবেন।</p>
-        <!-- আপনার ইউটিউব চ্যানেলের লিংক এখানে দেবেন -->
-        <a href="https://www.youtube.com/@ZNGameryoutuber" target="_blank" class="btn btn-youtube">ইউটিউব চ্যানেল সাবস্ক্রাইব করুন</a>
+        <p>স্বাগতম khanidani chhele-ra! ফ্রি ফায়ার প্রক্সি সার্ভার এবং সব সেফ ডাউনলোড লিংক এখানে পাবেন।</p>
+        
+        <!-- লাইভ সাবস্ক্রাইবার কাউন্টার উইজেট -->
+        <div class="sub-counter-box">
+            <h4 style="margin: 5px 0; color: #ff4a5a;">🔴 ZN Gamer Live Subscribers</h4>
+            <iframe src="https://counts.live/embed/youtube-subscriber-count/UC_mDUMp19e0A7_gO12Vms8A" style="width:100%; height:80px; border:none; background:transparent;"></iframe>
+        </div>
     </header>
 
     <!-- মেইন কন্টেন্ট -->
     <div class="container">
 
-        <!-- ফাইল ডাউনলোড কার্ড -->
+        <!-- ১. ফাইল ডাউনলোড কার্ড -->
         <div class="card">
-            <h2>Free Fire VVIP Proxy Server (OB53)</h2>
-            <p>ভিডিওতে দেখানো প্রক্সি সার্ভারের জেনুইন এবং সুরক্ষিত ফাইলটি কোনো ঝামেলা ছাড়াই সরাসরি ডাউনলোড করতে নিচের বাটনে ক্লিক করুন।</p>
+            <h2>Free Fire VVIP Proxy Server (OB53/OB52)</h2>
+            <p>ভিডিওতে দেখানো Astute Beta প্রক্সি সার্ভারের জেনুইন ফাইলটি কোনো ঝামেলা ছাড়াই সরাসরি ডাউনলোড করতে নিচের বাটনে ক্লিক করুন।</p>
             <blockquote style="background: rgba(255,0,0,0.1); border-left: 5px solid #ff0000; padding: 10px; margin: 15px 0; border-radius: 4px; text-align: left;">
-                <strong>সাবধানতা:</strong> দয়া করে কেউ আপনার মেইন জিমেইল বা ফেসবুক আইডি এখানে লগইন করবেন না। শুধুমাত্র একটি নতুন <strong>Guest Account</strong> খুলে খেলুন।
+                <strong>সাবধানতা:</strong> দয়া করে কেউ আপনার মেইন জিমেইল বা ফেসবুক আইডি এখানে লগইন করবেন না। শুধুমাত্র একটি নতুন <strong>Guest Account</strong> খুলে খেলুন।
             </blockquote>
-            <!-- 'href' এর ভেতর আপনার আসল ফাইল ডাউনলোড লিংকটি বসিয়ে দেবেন (যেমন: Mediafire লিংক) -->
-            <a href="আপনার_ডাউনলোড_লিংক_এখানে" target="_blank" class="btn">সরাসরি ডাউনলোড করুন</a>
+            
+            <!-- জাভাস্ক্রিপ্ট সেফ ডাউনলোড বাটন -->
+            <button onclick="window.open('https://astuteserver.com/', '_blank', 'noopener,noreferrer')" class="btn">সরাসরি ডাউনলোড করুন</button>
         </div>
 
-        <!-- সামাজিক যোগাযোগ মাধ্যম -->
+        <!-- ২. অটোমেটিক অল ভিডিও প্লেলিস্ট সেকশন -->
+        <div class="card">
+            <h2>আমার চ্যানেলের সব ভিডিওসমূহ (অটো-আপডেট)</h2>
+            <p style="color: #66fcf1; font-size: 0.9rem; margin-bottom: 15px;">💡 নতুন ভিডিও ছাড়লে এখানে স্বয়ংক্রিয়ভাবে সবার প্রথমে চলে আসবে!</p>
+            <div class="playlist-responsive">
+                <!-- আপনার চ্যানেলের আপলোড প্লেলিস্ট এমবেড করা হয়েছে -->
+                <iframe src="https://www.youtube.com/embed/videoseries?list=UU_mDUMp19e0A7_gO12Vms8A" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- ৩. বিশাল সাবস্ক্রাইব বাটন অপশন -->
+        <a href="https://www.youtube.com/@ZNGameryoutuber?sub_confirmation=1" target="_blank" class="btn-big-youtube">🔴 চ্যানেলটি সাবস্ক্রাইব করুন 🔴</a>
+
+        <!-- ৪. সামাজিক যোগাযোগ মাধ্যম -->
         <div class="card">
             <h2>যোগাযোগ ও সাপোর্ট</h2>
-            <p>আপনার কোনো সমস্যা হলে বা আনলক করতে সমস্যা হলে সরাসরি আমার সোশ্যাল মিডিয়ায় যোগাযোগ করতে পারেন।</p>
-            <!-- আপনার ফেসবুক বা ইনস্টাগ্রাম লিংক বসানোর জায়গা -->
-            <a href="#" target="_blank" class="btn" style="background: #1877f2; color:#fff; box-shadow:none;">ফেসবুক পেজ</a>
-            <a href="#" target="_blank" class="btn" style="background: #e1306c; color:#fff; box-shadow:none;">ইনস্টাগ্রাম</a>
+            <p>যেকোনো সমস্যা বা হেল্পের জন্য সরাসরি আমার ফেসবুক পেজে মেসেজ দিতে পারো।</p>
+            <a href="https://facebook.com" target="_blank" class="btn" style="background: #1877f2; color: #fff; box-shadow: none;">ফেসবুক পেজ</a>
         </div>
 
     </div>
