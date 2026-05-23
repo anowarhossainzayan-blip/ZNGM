@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZN Gamer - Official Gaming Hub</title>
+    <style>
+        /* মূল থিম ও ব্যাকগ্রাউন্ড (গেমিং লুক) */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0c10;
+            color: #c5c6c7;
+            text-align: center;
+        }
+
+        /* হেডার ও লোগো সেকশন */
+        header {
+            background: linear-gradient(135deg, #1f2833, #0b0c10);
+            padding: 50px 20px;
+            border-bottom: 3px solid #ff4a5a;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            color: #ff4a5a;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(255, 74, 90, 0.6);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            color: #66fcf1;
+            margin-top: 10px;
+        }
+
+        /* কন্টেইনার */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        /* টাইটেল স্টাইল */
+        .section-title {
+            font-size: 2rem;
+            color: #45f3ff;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #1f2833;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* প্রক্সি সার্ভার ডাউনলোড কার্ড */
+        .download-box {
+            background: linear-gradient(145deg, #1f2833, #151b22);
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 50px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+            border: 1px solid #ff4a5a;
+        }
+
+        .download-box h2 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .warning-text {
+            background: rgba(255, 74, 90, 0.1);
+            border-left: 5px solid #ff4a5a;
+            padding: 12px;
+            margin: 20px 0;
+            border-radius: 4px;
+            text-align: left;
+            color: #ff8893;
+        }
+
+        /* অ্যাকশন বাটন */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff4a5a, #b32535);
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 0 15px rgba(255, 74, 90, 0.4);
+            transition: 0.3s;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 74, 90, 0.8);
+        }
+
+        .btn-youtube {
+            background: #ff0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .btn-youtube:hover {
+            background: #cc0000;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+        }
+
+        /* ভিডিও গ্যালারি গ্রিড সেকশন */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            background-color: #1f2833;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2c3540;
+            transition: 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            border-color: #45f3ff;
+        }
+
+        /* রেসপনসিভ ইউটিউব প্লেয়ার কন্টেইনার */
+        .video-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+
+        .video-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 0;
+        }
+
+        .video-info {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .video-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            color: #fff;
+            line-height: 1.4;
+        }
+
+        .video-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #66fcf1;
+        }
+
+        /* ফুটার */
+        footer {
+            background-color: #1f2833;
+            padding: 25px;
+            font-size: 0.9rem;
+            color: #858585;
+            border-top: 1px solid #2c3540;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- হেডার ব্যানার -->
+    <header>
+        <h1>ZN Gamer</h1>
+        <p>ফ্রি ফায়ার প্রক্সি সার্ভার, ওবি আপডেট এবং সব সিকিউর ডাউনলোড লিংক এখানে পাবেন!</p>
+        <a href="https://www.youtube.com/@ZNGameryoutuber" target="_blank" class="btn btn-youtube">চ্যানেলটি সাবস্ক্রাইব করুন</a>
+    </header>
+
+    <div class="container">
+
+        <!-- ১. প্রক্সি সার্ভার ডাউনলোড সেকশন -->
+        <div class="download-box">
+            <h2>Free Fire VVIP Proxy Server (OB53)</h2>
+            <p>ভিডিওতে দেখানো প্রক্সি সার্ভারের আসল এপিকে (APK) ফাইলটি কোনো ঝামেলা বা পপ-আপ অ্যাড ছাড়াই সরাসরি ডাউনলোড করুন।</p>
+            
+            <div class="warning-text">
+                <strong>🚨 গুরুত্বপূর্ণ সতর্কতা:</strong> আপনার আসল ফ্রি ফায়ার আইডি (গুগল/ফেসবুক) এখানে ভুলেও লগইন করবেন না। আইডি ব্যান হওয়া থেকে বাঁচাতে শুধুমাত্র একটি নতুন <strong>Guest Account</strong> তৈরি করে এনজয় করুন!
+            </div>
+            
+            <!-- 'href' এর ভেতর আপনার আসল ডাউনলোড লিংকটি (যেমন মিডিয়াফায়ার বা মেগা লিংক) বসিয়ে দেবেন -->
+            <a href="আপনার_আসল_ডাউনলোড_লিংক_এখানে" target="_blank" class="btn">সরাসরি ডাউনলোড লিংক</a>
+        </div>
+
+
+        <!-- ২. ইউটিউব ভিডিওর গ্যালারি সেকশন -->
+        <span class="section-title">আমার সব ভিডিওসমূহ</span>
+        
+        <div class="video-grid">
+
+            <!-- ভিডিও ১ (আপনার প্রক্সি সার্ভার ভিডিও) -->
+            <div class="video-card">
+                <div class="video-responsive">
+                    <!-- আপনার ভিডিওর ID (g_b5BlffeHI) এমবেড করা হয়েছে -->
+                    <iframe src="https://www.youtube.com/embed/g_b5BlffeHI" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>New Proxy server Download | Secure 100% | No Terabox</h3>
+                    <p>ফ্রি ফায়ার ওবি প্রক্সি সার্ভার সম্পূর্ণ ফ্রিতে ডাউনলোড এবং আনলক করার নিয়ম।</p>
+                </div>
+            </div>
+
+            <!-- ভিডিও ২ (নতুন ভিডিও অ্যাড করার ডেমো) -->
+            <div class="video-card">
+                <div class="video-responsive">
+                    <!-- অন্য ভিডিওর আইডি যোগ করার জন্য 'embed/' এর পরে আইডি বসাবেন -->
+                    <iframe src="https://www.youtube.com/embed/ভিডিও_আইডি_এখানে" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>আপনার দ্বিতীয় ভিডিওর টাইটেল</h3>
+                    <p>ভিডিওর ছোট একটি বিবরণ বা ডেসক্রিপশন এখানে লিখবেন।</p>
+                </div>
+            </div>
+
+            <!-- ভিডিও ৩ (নতুন ভিডিও অ্যাড করার ডেমো) -->
+            <div class="video-card">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/ভিডিও_আইডি_এখানে" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>আপনার তৃতীয় ভিডিওর টাইটেল</h3>
+                    <p>ভিডিওর ছোট একটি বিবরণ বা ডেসক্রিপশন এখানে লিখবেন।</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ফুটার সেকশন -->
+    <footer>
+        <p>&copy; 2026 ZN Gamer | Developed for Khanidani Chhele-ra!</p>
+    </footer>
+
+</body>
+</html>
