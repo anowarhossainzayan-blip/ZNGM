@@ -72,6 +72,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             border: 1px solid #2c3540;
             transition: 0.3s;
+            text-align: left; /* ভেতরে টেক্সট পড়ার সুবিধার জন্য */
         }
 
         .card:hover {
@@ -80,8 +81,18 @@
         }
 
         .card h2 {
-            color: #fff;
+            color: #45f3ff;
             margin-top: 0;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            border-bottom: 2px solid #2c3540;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .card p, .card li {
+            line-height: 1.6;
+            color: #c5c6c7;
         }
 
         /* সুন্দর বোতাম বা বাটন */
@@ -100,6 +111,7 @@
             margin-right: 10px;
             cursor: pointer;
             border: none;
+            text-align: center;
         }
 
         .btn:hover {
@@ -131,6 +143,43 @@
         .game-logo:hover {
             transform: scale(1.15);
             box-shadow: 0 0 25px #ff6600;
+        }
+
+        /* ইনফো গ্রিড (চ্যানেল ফিচারের জন্য) */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .info-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #2c3540;
+            text-align: center;
+        }
+        .info-item h4 {
+            margin: 0 0 5px 0;
+            color: #66fcf1;
+        }
+
+        /* নোটিশ বোর্ড */
+        .notice-board {
+            background: rgba(255, 165, 0, 0.1);
+            border: 1px solid #ffa500;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .notice-tag {
+            background: #ffa500;
+            color: #0b0c10;
+            padding: 2px 8px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            text-transform: uppercase;
         }
 
         /* ইউটিউব ভিডিও গ্রিড */
@@ -190,6 +239,7 @@
             transition: 0.3s;
             text-transform: uppercase;
             animation: pulse 1.5s infinite;
+            text-align: center;
         }
 
         @keyframes pulse {
@@ -216,10 +266,10 @@
         <h1>ZN Gamer</h1>
         <p>স্বাগতম খানদানি ছেলেরা! ফ্রি ফায়ার প্রক্সি সার্ভার এবং সব সেফ ডাউনলোড লিংক এখানে পাবেন।</p>
         
-        <!-- আপনার রিয়েল সাবস্ক্রাইবার শো বক্স (১০০% ফিক্সড) -->
+        <!-- আপনার অরিজিনাল ১৭৫ সাবস্ক্রাইবার বক্স -->
         <div class="sub-counter-box">
             <p style="margin: 0; font-size: 0.95rem; color: #ff4a5a; font-weight: bold;">🔴 ZN GAMER SUBSCRIBERS</p>
-            <div class="sub-count-number">68.2K</div>
+            <div class="sub-count-number">175</div>
             <p style="margin: 0; font-size: 0.8rem; color: #a0aec0;">Khanidani Family Members</p>
         </div>
     </header>
@@ -227,28 +277,67 @@
     <!-- মেইন কন্টেন্ট -->
     <div class="container">
 
+        <!-- অফিশিয়াল নোটিশ বোর্ড (নতুন যোগ করা হয়েছে) -->
+        <div class="notice-board" style="text-align: left;">
+            <p style="margin: 0 0 8px 0;"><span class="notice-tag">Notice</span> <strong>নতুন আপডেট:</strong></p>
+            <p style="margin: 0; font-size: 0.95rem; color: #fff;">ফ্রি ফায়ার OB53 প্রক্সি সার্ভার ফাইলটি নিচে আপলোড করা হয়েছে। ভিডিওর নিয়ম মেনে ফাইল সেটআপ করুন। কোনো সমস্যা হলে আমাদের ফেসবুক পেজে ইনবক্স করুন।</p>
+        </div>
+
+        <!-- চ্যানেল পরিচিতি ও ইনফো সেকশন (নতুন যোগ করা হয়েছে) -->
+        <div class="card">
+            <h2>About ZN Gamer</h2>
+            <p>হেটস আপ গাইস! আমি <strong>ZN Gamer</strong>। আমাদের এই চ্যানেলে আপনারা নিয়মিত ফ্রি ফায়ার (Free Fire) গেমের সব লেটেস্ট টিপস, ট্রিকস, কাস্টম প্রক্সি সার্ভার মেথড, এবং গেমিং গাইডলাইন সম্পূর্ণ ফ্রিতে পাবেন। কোনো প্রকার ফেক কন্টেন্ট বা স্প্যাম ছাড়া একদম রিয়েল ও সেফ ফাইল প্রোভাইড করাই আমাদের মূল উদ্দেশ্য।</p>
+            
+            <h3 style="color: #66fcf1; font-size: 1.2rem; margin-top: 20px;">আমরা যেসব কন্টেন্ট নিয়ে কাজ করি:</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>🎮 Free Fire Mods</h4>
+                    <p style="margin:0; font-size:0.85rem;">সেফ ও জেনুইন গেমিং মেথড</p>
+                </div>
+                <div class="info-item">
+                    <h4>⚙️ Proxy Server</h4>
+                    <p style="margin:0; font-size:0.85rem;">OB আপডেট ও ভিভিআইপি ফাইল</p>
+                </div>
+                <div class="info-item">
+                    <h4>💡 Tips & Tricks</h4>
+                    <p style="margin:0; font-size:0.85rem;">সহজ বাংলায় পারফেক্ট গাইড</p>
+                </div>
+            </div>
+
+            <!-- চ্যানেল মাইলস্টোন বা লক্ষ্য -->
+            <h3 style="color: #66fcf1; font-size: 1.2rem; margin-top: 25px;">Our Target (Milestones):</h3>
+            <ul style="margin: 10px 0; padding-left: 20px; font-size: 0.95rem;">
+                <li>🎯 <strong>500 Subscribers:</strong> কাস্টম গিভঅ্যাওয়ে (Giveaway) 🔓</li>
+                <li>🎯 <strong>1K Subscribers:</strong> স্পেশাল ফেস রিভিল / লাইভ স্ট্রিম 🔒</li>
+            </ul>
+        </div>
+
         <!-- ফাইল ডাউনলোড কার্ড -->
         <div class="card">
             <h2>Free Fire VVIP Proxy Server (OB53)</h2>
-            <p>ভিডিওতে দেখানো প্রক্সি সার্ভারের ஜেনুইন এবং সুরক্ষিত ফাইলটি কোনো ঝামেলা ছাড়াই সরাসরি ডাউনলোড করতে নিচের বাটনে ক্লিক করুন।</p>
+            <p>ভিডিওতে দেখানো প্রক্সি সার্ভারের জেনুইন এবং সুরক্ষিত ফাইলটি কোনো ঝামেলা ছাড়াই সরাসরি ডাউনলোড করতে নিচের বাটনে ক্লিক করুন।</p>
             <blockquote style="background: rgba(255,0,0,0.1); border-left: 5px solid #ff0000; padding: 10px; margin: 15px 0; border-radius: 4px; text-align: left;">
                 <strong>সাবধানতা:</strong> দয়া করে কেউ আপনার মেইন জিমেইল বা ফেসবুক আইডি এখানে লগইন করবেন না। শুধুমাত্র একটি নতুন <strong>Guest Account</strong> খুলে খেলুন।
             </blockquote>
             
             <!-- প্রক্সি সার্ভার ডাউনলোড বাটন -->
-            <button onclick="window.open('https://astuteserver.com/', '_blank', 'noopener,noreferrer')" class="btn">সরাসরি ডাউনলোড করুন</button>
+            <div style="text-align: center;">
+                <button onclick="window.open('https://astuteserver.com/', '_blank', 'noopener,noreferrer')" class="btn">সরাসরি ডাউনলোড করুন</button>
+            </div>
             
             <hr style="border: 0; height: 1px; background: #2c3540; margin: 30px 0;">
             
             <!-- ফ্রি ফায়ার প্লে-স্টোর ডাউনলোড সেকশন -->
-            <h3 style="color: #45f3ff; margin-bottom: 5px;">Free Fire Official Game Download</h3>
-            <p style="font-size: 0.95rem; margin-bottom: 10px;">নিচের লোগো অথবা বাটনে ক্লিক করে সরাসরি প্লে-স্টোর থেকে মেইন গেম ডাউনলোড করুন:</p>
-            
-            <img src="https://garenafreenew-a.akamaihd.net/ff/garena_ff_web/live/id/pc/images/favicon.ico" alt="Free Fire Logo" class="game-logo" onclick="window.open('https://play.google.com/store/apps/details?id=com.dts.freefireth', '_blank')">
-            <br>
-            <button onclick="window.open('https://play.google.com/store/apps/details?id=com.dts.freefireth', '_blank')" class="btn btn-playstore">
-                🎮 Download From Play Store
-            </button>
+            <div style="text-align: center;">
+                <h3 style="color: #45f3ff; margin-bottom: 5px;">Free Fire Official Game Download</h3>
+                <p style="font-size: 0.95rem; margin-bottom: 10px;">নিচের লোগো অথবা বাটনে ক্লিক করে সরাসরি প্লে-স্টোর থেকে মেইন গেম ডাউনলোড করুন:</p>
+                
+                <img src="https://garenafreenew-a.akamaihd.net/ff/garena_ff_web/live/id/pc/images/favicon.ico" alt="Free Fire Logo" class="game-logo" onclick="window.open('https://play.google.com/store/apps/details?id=com.dts.freefireth', '_blank')">
+                <br>
+                <button onclick="window.open('https://play.google.com/store/apps/details?id=com.dts.freefireth', '_blank')" class="btn btn-playstore">
+                    🎮 Download From Play Store
+                </button>
+            </div>
         </div>
 
         <!-- ভিডিও গ্যালারি সেকশন -->
@@ -279,7 +368,7 @@
         <a href="https://www.youtube.com/@ZNGameryoutuber?sub_confirmation=1" target="_blank" class="btn-big-youtube">🔴 চ্যানেলটি সাবস্ক্রাইব করুন 🔴</a>
 
         <!-- সামাজিক যোগাযোগ মাধ্যম -->
-        <div class="card">
+        <div class="card" style="text-align: center;">
             <h2>যোগাযোগ ও সাপোর্ট</h2>
             <p>আপনার কোনো সমস্যা হলে বা আনলক করতে সমস্যা হলে সরাসরি আমার সোশ্যাল মিডিয়ায় যোগাযোগ করতে পারেন।</p>
             <a href="https://facebook.com" target="_blank" class="btn" style="background: #1877f2; color:#fff; box-shadow:none;">ফেসবুক পেজ</a>
@@ -290,7 +379,7 @@
 
     <!-- ফুটার -->
     <footer>
-        <p>&copy; 2026 ZN Gamer. All Rights Reserved. Developed for Khanidani ZN-GUYS!</p>
+        <p>&copy; 2026 ZN Gamer. All Rights Reserved. Developed for ZN-GUYS!</p>
     </footer>
 
 </body>
