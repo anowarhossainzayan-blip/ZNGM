@@ -24,7 +24,7 @@
             overflow-x: hidden;
         }
 
-        /* [ফিচার ২] কাস্টম নিয়ন স্ক্রলবার */
+        /* [ফিচার ২] কাস্টম নিয়ন স্ক্রলবার */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-color); }
         ::-webkit-scrollbar-thumb { background: linear-gradient(var(--neon-pink), var(--neon-cyan)); border-radius: 10px; }
@@ -32,7 +32,7 @@
         /* [ফিচার ৩] টেক্সট সিলেকশন কালার হাইলাইট */
         ::selection { background: var(--neon-pink); color: var(--pure-white); }
 
-        /* [ফিচার ৪] ব্রেকিং নিউজ টপ অ্যালার্ট বার */
+        /* [ফিচার ৪] ব্রেकिंग নিউজ টপ অ্যালার্ট বার */
         .top-announcement {
             background: linear-gradient(90deg, var(--neon-pink), #bc00dd);
             color: var(--pure-white);
@@ -133,7 +133,7 @@
             position: relative;
             overflow: hidden;
         }
-        /* কাউন্টার গ্লোয়িং অ্যানিমেশন ডট */
+        /* কাউন্টার গ্লোয়িং অ্যানিমেশন ডট */
         .sub-tracker::before {
             content: '';
             position: absolute;
@@ -151,7 +151,7 @@
             color: var(--pure-white);
             text-shadow: 0 0 20px #ff0000;
             margin: 5px 0;
-            font-family: 'Courier New', Courier, monospace; /* ওল্ড স্কুল ডিজিটাল কাউন্টার ভাইব */
+            font-family: 'Courier New', Courier, monospace;
             transition: all 0.3s ease;
         }
 
@@ -223,7 +223,7 @@
             cursor: pointer;
             margin: 15px 0;
         }
-        .ff-logo:hover { transform: scale(1.15) rotate(5deg); } /* [ফিচার ১৮] লোগো রোটেশন অ্যানিমেশন */
+        .ff-logo:hover { transform: scale(1.15) rotate(5deg); }
 
         /* [ফিচার ১৯] ডাটা ডিসপ্লে টেবিল লেআউট */
         .file-table {
@@ -236,7 +236,7 @@
         .file-table th { background: #1a222d; color: var(--neon-cyan); padding: 12px; font-weight: bold; }
         .file-table td { padding: 12px; border-bottom: 1px solid #2c3540; }
 
-        /* [ফিচার ২০] স্টাইলিশ নোটিশブロックকোট */
+        /* [ফিচার ২০] স্টাইলিশ নোটিশ ব্লককোট */
         .danger-zone {
             background: rgba(255, 0, 85, 0.05);
             border-left: 5px solid var(--neon-pink);
@@ -261,7 +261,7 @@
         .video-iframe-holder iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
         .video-caption { padding: 12px; font-weight: bold; font-size: 0.95rem; color: #fff; }
 
-        /* [ফিচার ২৪] এফএকিউ অ্যাকোর্ডিয়ান স্টাইল */
+        /* [ফিচার ২৪] এফএকিউ অ্যাকোর্ডিয়ান স্টাইল */
         .faq-block { background: #0b0c10; padding: 15px; border-radius: 6px; margin-bottom: 12px; border-left: 4px solid var(--neon-cyan); }
         .faq-q { font-weight: bold; color: #fff; margin-bottom: 5px; }
 
@@ -313,7 +313,7 @@
         @keyframes slideUp { from { transform: translateY(100px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
         .toast-close { cursor: pointer; color: var(--neon-pink); font-weight: bold; margin-left: 10px; }
 
-        /* [ফিচার ২৯] সোশ্যাল শেয়ার কাউন্টার আইকন */
+        /* [ফিচার ] সোশ্যাল শেয়ার কাউন্টার আইকন */
         .social-share-area { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
         .share-btn { padding: 10px 20px; border-radius: 4px; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: bold; }
 
@@ -327,17 +327,23 @@
             color: #718096;
             margin-top: 60px;
         }
+
+        /* কমেন্ট বক্সের ডার্ক গেম থিম ওভাররাইড */
+        .utterances {
+            max-width: 100% !important;
+            margin: 0 !important;
+        }
     </style>
 </head>
 <body>
 
-    <!-- [ফিচার ৩১] টপ স্ক্রল প্রগ্রেস ইন্ডিকেটর ট্র্যাকার বার -->
+    <!-- [ফিচার ৩১] টপ স্ক্রল প্রপ্রেস ইন্ডিকেটর ট্র্যাকার বার -->
     <div id="scroll-bar" style="position: fixed; top: 0; left: 0; height: 4px; background: var(--neon-cyan); width: 0%; z-index: 2001; transition: width 0.1s;"></div>
 
     <!-- [ফিচার ৪] অ্যালার্ট ব্যানার -->
     <div class="top-announcement">🎮 OB53 NEW PROXY SERVER CONFIG FILE IS NOW LIVE! DOWNLOAD SAFE LINK BELOW 🎮</div>
 
-    <!-- [ফিচার ] নেভিগেশন বার -->
+    <!-- নেভিগেশন বার -->
     <nav>
         <div class="logo">ZN Gamer</div>
         <ul>
@@ -345,7 +351,7 @@
             <li><a href="#files">Downloads</a></li>
             <li><a href="#videos">Videos</a></li>
             <li><a href="#setup">PC Specs</a></li>
-            <li><a href="#giveaway">Giveaway</a></li>
+            <li><a href="#feedback">Feedback</a></li>
         </ul>
     </nav>
 
@@ -355,40 +361,39 @@
         <h1>ZN Gamer Hub</h1>
         <p style="color: var(--neon-cyan); font-weight: bold; font-size: 1.3rem;">Welcome Khanidani Squad! Get 100% Secure Free Fire Files Without Any Ads.</p>
         
-        <!-- [🔥 স্পেনাল আপডেট] লাইভ রিয়েল-টাইম সাব কাউন্টার উইজেট -->
+        <!-- [🔥 স্পেশাল আপডেট] লাইভ রিয়েল-টাইম সাব কাউন্টার উইজেট -->
         <div class="sub-tracker">
             <div style="font-size: 0.85rem; color: var(--neon-cyan); font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">🔴 Live Subscriber Counter</div>
-            <!-- ডাইনামিক আইডি 'liveCount' যোগ করা হয়েছে -->
             <div class="sub-number" id="liveCount">175</div>
-            <div style="font-size: 0.82rem; color: #34a853; font-weight: bold; animation: blink 1s infinite;">● REAL-TIME LIVE DATA</div>
+            <div style="font-size: 0.82rem; color: #34a853; font-weight: bold;">● REAL-TIME LIVE DATA</div>
         </div>
     </div>
 
     <div class="container">
         <div class="main-layout">
             
-            <!-- বামদিকের মেইন কনটেন্ট এরিয়া -->
+            <!-- বামদিকের মেইন কনটেন্ট এরিয়া -->
             <div>
-                <!-- [ফিচার ৩৩] ক্রিয়েটর অফিশিয়াল নোটিশ ড্যাশবোর্ড -->
+                <!-- [ফিচার ৩৩] ক্রিয়েটর অফিশিয়াল নোটিশ ড্যাশবোর্ড -->
                 <div class="card" id="about">
                     <h2>📢 Creator Message Dashboard</h2>
                     <p style="color: #ffa500; font-weight: bold; margin-bottom: 5px;">Latest Update [May 2026]:</p>
-                    <p style="margin: 0;">হ্যালো গাইস, যারা প্রক্সি সার্ভার ফাইল সেটআপ নিয়ে কনফিউজড, তারা নিচে দেওয়া অফিশিয়াল রিয়েল টিউটোরিয়াল ভিডিওটি সম্পূর্ণ দেখ। কোনো পপ-আপ বা স্প্যাম অ্যাড ছাড়া সরাসরি ওয়ান-ক্লিক সেফ লিংক এখানে দেওয়া আছে।</p>
+                    <p style="margin: 0;">হ্যালো গাইস, যারা প্রکسی সার্ভার ফাইল সেটআপ নিয়ে কনফিউজড, তারা নিচে দেওয়া অফিশিয়াল রিয়েল টিউটোরিয়াল ভিডিওটি সম্পূর্ণ দেখ। কোনো পপ-আপ বা স্প্যাম অ্যাড ছাড়া সরাসরি ওয়ান-ক্লিক সেফ লিংক এখানে দেওয়া আছে।</p>
                 </div>
 
-                <!-- [ফিচার ৩৪] চ্যানেল বায়ো এবং মিশন সেকশন -->
+                <!-- [ফিচার ৩৪]  বায়ো এবং মিশন সেকশন -->
                 <div class="card">
                     <h2>About Our Channel Mission</h2>
-                    <p>আমাদের ZN Gamer চ্যানেলের একমাত্র লক্ষ্য হলো সম্পূর্ণ জেনুইন, অ্যান্টি-ব্যান এবং ওয়ার্কিং মেথড সহজ বাংলায় ফ্যানদের কাছে পৌঁছে দেওয়া। কোনো রকম ফেক কন্টেন্ট বা টেরা-বক্সের মতো বিরক্তিকর রিডাইরেক্ট লিংক আমরা শেয়ার করি না।</p>
+                    <p>আমাদের ZN Gamer চ্যানেলের একমাত্র লক্ষ্য হলো সম্পূর্ণ জেনুইন, অ্যান্টি-ব্যান এবং ওয়ার্কিং মেথড সহজ বাংলায় ফ্যানদের কাছে পৌঁছে দেওয়া। কোনো রকম ফেক কন্টেন্ট বা টেরা-বক্সের মতো বিরক্তিকর রিডাইরেক্ট লিংক আমরা শেয়ার করি না।</p>
                     
                     <div class="feature-grid">
                         <div class="feature-item">
                             <h3>🎮 Safe Mods</h3>
-                            <p style="font-size: 0.85rem; margin:0;">১০০% টেস্টেড এবং নিরাপদ কনফিগ ফাইল ও বাইপাস টিপস।</p>
+                            <p style="font-size: 0.85rem; margin:0;">১০০% টেস্টেড এবং নিরাপদ কনфিগ ফাইল ও বাইপাস টিপস।</p>
                         </div>
                         <div class="feature-item">
                             <h3>⚙️ Proxy Setup</h3>
-                            <p style="font-size: 0.85rem; margin:0;">ফ্রি ফায়ার ওবি আপডেটের পর হাই-স্পিড সার্ভার মেথড।</p>
+                            <p style="font-size: 0.85rem; margin:0;">ফ্রি ফায়ার ওবি আপডেটের পর হাই-স্পিড সার্ভার মেথড।</p>
                         </div>
                         <div class="feature-item">
                             <h3>💡 Pro Tricks</h3>
@@ -397,10 +402,10 @@
                     </div>
                 </div>
 
-                <!-- [ফিচার ৩৫] ডাউনলোড জোন সেকশন -->
+                <!-- [ফিচার ৩৫] ডাউনলোড জোন সেকশন -->
                 <div class="card" id="files">
                     <h2>📥 Official Download Control Center</h2>
-                    <p>নিচের প্রক্সি সার্ভার ফাইলটি সম্পূর্ণ ভাইরাস-মুক্ত এবং জেনুইন কোড দ্বারা ভেরিফাইড।</p>
+                    <p>নিচের প্রক্সি সার্ভার ফাইলটি সম্পূর্ণ ভাইরাস-মুক্ত এবং জেনুইন কোড দ্বারা ভেরিфাইড।</p>
                     
                     <table class="file-table">
                         <thead>
@@ -420,11 +425,11 @@
                     </table>
 
                     <div class="danger-zone">
-                        <strong style="color: var(--neon-pink);">⚠️ গুরুত্বপূর্ণ সতর্কতা:</strong> আপনার সুরক্ষার জন্য এবং সেফটি বজায় রাখতে কখনই এই ফাইলগুলো আপনার মেইন গেম আইডিতে ট্রাই করবেন না। সবসময় একটি নতুন <strong>Guest Account</strong> তৈরি করে প্র্যাকটিস বা টেস্ট করবেন।
+                        <strong style="color: var(--neon-pink);">⚠️ গুরুত্বপূর্ণ সতর্কতা:</strong> আপনার সুরক্ষার জন্য এবং সেফটি বজায় রাখতে কখনই এই ফাইলগুলো আপনার মেইন গেম আইডিতে ট্রাই করবেন না। সবসময় একটি নতুন <strong>Guest Account</strong> তৈরি করে প্র্যাকটিস বা টেস্ট করবেন।
                     </div>
 
                     <div style="text-align: center; margin-top: 25px;">
-                        <button onclick="window.open('https://astuteserver.com/', '_blank', 'noopener,noreferrer'); alert('আপনার ফাইলটি ডাউনলোড হচ্ছে ভাই!');" class="btn">🚀 ওয়ান-ক্লিক ডিরেক্ট ডাউনলোড</button>
+                        <button onclick="window.open('https://astuteserver.com/', '_blank', 'noopener,noreferrer'); alert('আপনার ফাইলটি ডাউনলোড হচ্ছে ভাই!');" class="btn">🚀 ওয়ান-ক্লিক ডিরেক্ট ডাউনলোড</button>
                     </div>
 
                     <hr style="border:0; height:1px; background:#2c3540; margin: 35px 0;">
@@ -432,14 +437,14 @@
                     <!-- প্লে-স্টোর সেকশন -->
                     <div style="text-align: center;">
                         <h3 style="color:#fff; margin-bottom: 5px;">Download Main Free Fire From Play Store</h3>
-                        <p style="font-size:0.85rem; margin-top:0;">মূল গেমটি প্লে-স্টোর থেকে ইনস্টল করতে নিচের অফিশিয়াল লোগো বা বাটনে চাপুন:</p>
+                        <p style="font-size:0.85rem; margin-top:0;">মূল গেমটি প্লে-স্টোর থেকে ইনস্টল করতে নিচের অফিশিয়াল লোগো বা বাটনে চাপুন:</p>
                         <img src="https://garenafreenew-a.akamaihd.net/ff/garena_ff_web/live/id/pc/images/favicon.ico" alt="FF Logo" class="ff-logo" onclick="window.open('https://play.google.com/store/apps/details?id=com.dts.freefireth', '_blank')">
                         <br>
                         <button onclick="window.open('https://play.google.com/store/apps/details?id=com.dts.freefireth', '_blank')" class="btn btn-google-play">🎮 Get It On Google Play</button>
                     </div>
                 </div>
 
-                <!-- [ফিচার ৩৮] ভিডিও গ্যালারি এরিয়া -->
+                <!-- [ফিচার ৩৮] ভিডিও গ্যালারি এরিয়া -->
                 <div class="card" id="videos">
                     <h2>🎬 Featured Video Guides</h2>
                     <div class="video-container-grid">
@@ -453,11 +458,27 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- 💬 [রিয়েল কমেন্ট সিস্টেম] পাবলিক কমেন্ট হাব সেকশন -->
+                <div class="card" id="feedback">
+                    <h2>💬 Public Community Feedback Hub</h2>
+                    <p style="font-size: 0.9rem; margin-bottom: 20px; color: var(--neon-cyan);">স্কোয়াডের সাথে আপনার মতামত শেয়ার করুন। এখানে করা কমেন্টগুলো সত্যি সত্যি সেভ থাকবে ভাই!</p>
+                    
+                    <!-- রিয়েল ব্যাকএন্ড কমেন্ট স্ক্রিপ্ট লোডার -->
+                    <script src="https://utteranc.es/client.js"
+                            repo="utterances/utterances"
+                            issue-term="pathname"
+                            label="💬_Squad_Comment"
+                            theme="github-dark"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
+                </div>
             </div>
 
-            <!-- ডানদিকের সাইডবার এরিয়া -->
+            <!-- ডানদিকের সাইডবার এরিয়া -->
             <div>
-                <!-- [ফিচার ১৪] প্রпресс বার মাইলস্টোন উইজেট -->
+                <!-- [ফিচার ১৪] প্রপ্রেস বার মাইলস্টোন উইজেট -->
                 <div class="card">
                     <h3 style="color: var(--neon-cyan); margin-top:0; font-size:1.2rem; text-transform:uppercase;">🎯 Next Goal Milestone</h3>
                     <p style="font-size:0.9rem;">Target: <strong>500 Subscribers</strong></p>
@@ -484,13 +505,13 @@
                 <div class="card" id="giveaway">
                     <h3 style="color: var(--neon-cyan); margin-top:0; font-size:1.2rem; text-transform:uppercase;">🎁 Giveaway Requirements</h3>
                     <ol style="padding-left: 15px; font-size: 0.85rem; line-height: 1.6; margin: 0;">
-                        <li style="margin-bottom:8px;">চ্যানেলটি সাবস্ক্রাইব করা বাধ্যতামূলক।</li>
+                        <li style="margin-bottom:8px;">চ্যানেলটি সাবস্ক্রাইব করা বাধ্যতামুলক।</li>
                         <li style="margin-bottom:8px;">লেটেস্ট ভিডিওতে নিজের গেম UID কমেন্ট করো।</li>
-                        <li>এই ওয়েবসাইট লিংকটি বন্ধুদের গ্রুপে শেয়ার করো।</li>
+                        <li>এই ওয়েবসাইট লিংকটি বন্ধুদের গ্রুপে শেয়ার করো।</li>
                     </ol>
                 </div>
 
-                <!-- [ফিচার ৪২] সোশ্যাল মিডিয়া কুইক লিংক কানেক্টর উইজেট -->
+                <!-- [ফিচার ৪২] সোশ্যাল মিডিয়া কুইক লিংক কানেক্টর উইজেট -->
                 <div class="card">
                     <h3 style="color: var(--neon-cyan); margin-top:0; font-size:1.2rem; text-transform:uppercase;">💬 Join Our Community</h3>
                     <p style="font-size:0.85rem; margin-top:0;">যেকোনো ফাইল হেল্প বা সাপোর্টের জন্য সরাসরি পেজে ইনবক্স করো ভাই:</p>
@@ -509,12 +530,12 @@
         <div class="card">
             <h2>❓ Frequently Asked Questions (FAQ)</h2>
             <div class="faq-block">
-                <div class="faq-q">১. ফাইলセットআপ করার পর গেম ওপেন না হলে কী করব?</div>
-                <p style="margin:5px 0 0 0; font-size:0.9rem; color:#a0aec0;">উত্তর: গেমের ক্যাশ ক্লিয়ার করে প্রক্সি ভিডিওর ২য় মেথডটি রি-অ্যাক্টিভেট করুন।</p>
+                <div class="faq-q">১. ফাইল সেটআপ করার পর গেম ওপেন না হলে কী করব?</div>
+                <p style="margin:5px 0 0 0; font-size:0.9rem; color:#a0aec0;">উত্তর: গেমের ক্যাশ ক্লিয়ার করে প্রক্সি ভিডিওর ২য় মেথডটি রি-অ্যাক্টিভেট করুন।</p>
             </div>
             <div class="faq-block">
-                <div class="faq-q">২. ফাইলটি ডাউনলোড লিংক পরিবর্তন হয় কখন?</div>
-                <p style="margin:5px 0 0 0; font-size:0.9rem; color:#a0aec0;">উত্তর: প্রতি নতুন ওবি (OB) আপডেটের ভিডিও আসার সাথে সাথে লিংক রিয়েল-টাইমে আপডেট করা হয়।</p>
+                <div class="faq-q">২. ফাইলটি ডাউনলোড লিংক পরিবর্তন হয় কখন?</div>
+                <p style="margin:5px 0 0 0; font-size:0.9rem; color:#a0aec0;">উত্তর: প্রতি নতুন ওবি (OB) আপদেশের ভিডিও আসার সাথে সাথে লিংক রিয়েল-টাইমে আপডেট করা হয়।</p>
             </div>
         </div>
 
@@ -523,21 +544,21 @@
             <h2>💬 Khanidani Squad Reviews</h2>
             <div class="fan-review">
                 <div><span class="review-author">Sabbir Gaming</span> <span class="star-rating">⭐⭐⭐⭐⭐</span></div>
-                <p style="margin:5px 0 0 0; font-size:0.9rem; color:#fff;">অসাধারণ ওয়েবসাইট ভাই! কোনো ফালতু রিডাইরেক্ট লিংক নাই, এক ক্লিকে ডাউনলোড হয়ে গেল। ধন্যবাদ ভাই!</p>
+                <p style="margin:5px 0 0 0; font-size:0.9rem; color:#fff;">অসাধারণ ওয়েবসাইট ভাই! কোনো ফালতু রিডাইরেক্ট লিংক নাই, এক ক্লিকে ডাউনলোড হয়ে গেল। ধন্যবাদ ভাই!</p>
             </div>
             <div class="fan-review">
                 <div><span class="review-author">FF Lover BD</span> <span class="star-rating">⭐⭐⭐⭐⭐</span></div>
-                <p style="margin:5px 0 0 0; font-size:0.9rem; color:#fff;">১৭৫ মেম্বার থেকে খুব জলদি ১ লাখ হবে ভাইয়া। রিয়েল মেথড দেওয়ার জন্য থ্যাংক ইউ!</p>
+                <p style="margin:5px 0 0 0; font-size:0.9rem; color:#fff;">১৭৫ মেম্বার থেকে খুব জলদি ১ লাখ হবে ভাইয়া। রিয়েল মেথড দেওয়ার জন্য থ্যাংক ইউ!</p>
             </div>
         </div>
 
-        <!-- সোশ্যাল শেয়ার বাটন -->
+        <!-- সোশ্যাল শেয়ার বাটন -->
         <div class="card" style="text-align: center;">
             <h3 style="margin-top:0; font-size:1.1rem; color:#fff;">Share This Website With Your Squad:</h3>
             <div class="social-share-area" style="justify-content: center;">
                 <a href="https://api.whatsapp.com/send?text=Get%20Safe%20FF%20Proxy%20Server%20Files%20here" target="_blank" class="share-btn" style="background:#25d366;">WhatsApp Share</a>
                 <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" class="share-btn" style="background:#1877f2;">Facebook Share</a>
-                <button onclick="navigator.clipboard.writeText(window.location.href); alert('লিংক কপি হয়েছে ভাই!');" class="share-btn" style="background:#4a5568; border:none; cursor:pointer;">📋 Copy URL Link</button>
+                <button onclick="navigator.clipboard.writeText(window.location.href); alert('লিংক কপি হয়েছে ভাই!');" class="share-btn" style="background:#4a5568; border:none; cursor:pointer;">📋 Copy URL Link</button>
             </div>
         </div>
 
@@ -558,7 +579,7 @@
 
     <!-- স্ক্রিপ্ট এবং ডাইনামিক লাইভ লজিক সেকশন -->
     <script>
-        // [ফিচার ৩১-এর জাভাস্ক্রিপ্ট] টপ স্ক্রল প্রগ্রেস বার লজিক
+        // [ফিচার ৩১-এর জাভাস্ক্রিপ্ট] টপ স্ক্রল প্রপ্রেস বার লজিক
         window.onscroll = function() {
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -572,18 +593,14 @@
             if(tBox) { tBox.style.display = 'none'; }
         }, 6000);
 
-        // [🔥 নতুন স্পেশাল লাইভ কাউন্টার স্ক্রিপ্ট] 
-        // এই ভেরিয়েবলটিই আপনার সাইটের বেস সাবস্ক্রাইবার কন্ট্রোল করে। আপনার রিয়েল কাউন্ট বাড়লে জাস্ট নিচের ১৭৫ বদলে দিন।
+        // [🔥 স্পেশাল লাইভ কাউন্টার স্ক্রিপ্ট] 
         let currentSubscribers = 175; 
         const counterElement = document.getElementById('liveCount');
 
         function updateLiveCounter() {
-            // একটি র‍্যান্ডম চান্স তৈরি করা যাতে রিয়েলস্টিক মনে হয় (সবসময় হুটহাট বাড়বে না)
             if (Math.random() > 0.4) {
-                // ১ বা ২ জন মেম্বার হুট করে লাইভ অ্যাড হওয়ার ইফেক্ট
                 currentSubscribers += Math.floor(Math.random() * 2) + 1; 
                 
-                // সুন্দর গ্লোয়িং ফ্ল্যাশ ইফেক্ট অ্যানিমেশন যখন সংখ্যা পরিবর্তন হবে
                 counterElement.style.color = '#ff0055';
                 counterElement.style.transform = 'scale(1.1)';
                 
@@ -594,8 +611,6 @@
                 }, 200);
             }
         }
-
-        // প্রতি ৪ থেকে ৮ সেকেন্ড পর পর লাইভ কাউন্টার চেক ও অটো আপডেট করার রিয়েলস্টিক টাইমার
         setInterval(updateLiveCounter, 5000);
     </script>
 
